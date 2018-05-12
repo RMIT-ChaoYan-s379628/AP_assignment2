@@ -6,7 +6,7 @@
  * includeing Adult and Child.
  * for all Person. 
  */
-package assignment1;
+package Main;
 
 import java.util.*;
 

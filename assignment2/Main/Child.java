@@ -6,7 +6,7 @@
  * for all Children. 
  */
 
-package assignment1;
+package Main;
 
 import java.util.ArrayList;
 import java.util.List;

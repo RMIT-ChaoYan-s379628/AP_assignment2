@@ -1,5 +1,4 @@
-package assignment1;
-
+package Main;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -39,9 +38,9 @@ public class GUI extends Application {
 	@Override // Override the start in the Application
 
 	public void start(Stage primaryStage) {
-
-		primaryStage.setScene(mainMenu());
-		primaryStage.show();
+        this.primaryStage=primaryStage;
+		this.primaryStage.setScene(mainMenu());
+		this.primaryStage.show();
 
 	}
 
