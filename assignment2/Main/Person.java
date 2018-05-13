@@ -1,120 +1,111 @@
-
-/*
- * Author:Chao Yan	
- * Date: 22/3/2018
- * Introduction: Person define a class of all the person in the game,
- * includeing Adult and Child.
- * for all Person. 
- */
 package Main;
-
-import java.util.*;
+import java.util.ArrayList;
 
 public class Person {
-	public String Name;
-	public int Age;
-	public String Status;
-	public String photo;
-	/* This is the list of every person has his/her friends. */
-	public List<Person> Friends = new ArrayList();
+	protected int m_nAge;
+	protected String m_strName, m_strImage, m_strStatus, m_strSex, m_strState;
+	private ArrayList<Person> m_lstParent = null, m_lstSibling = null;
 
-	/* Construction method,including name and age to construct a person */
-	public Person() {
-
+	public Person(String strName, int nAge, String strImage, String strStatus,
+			String strSex, String strState) {
+		m_strName = strName;
+		m_nAge = nAge;
+		m_strImage = strImage;
+		m_strStatus = strStatus;
+		m_strSex = strSex;
+		m_strState = strState;
+		m_lstParent = new ArrayList<Person>();
+		m_lstSibling = new ArrayList<Person>();
 	}
 
-	/* Construction method,including name and age to construct a person */
-	public Person(String Name, int Age) {
-		this.Name = Name;
-		this.Age = Age;
+	public void setImage(String strImage) {
+		m_strImage = strImage;
 	}
 
-	/* the set/get method of the name */
-	public String getName() {
-		return Name;
+	public void setStatus(String strStatus) {
+		m_strStatus = strStatus;
 	}
 
-	/* the set/get method of the name */
-	public void setName(String Name) {
-		this.Name = Name;
+	public void setSex(String strSex) {
+		m_strSex = strSex;
 	}
 
-	/* the set/get method of the age */
+	public void setState(String strState) {
+		m_strState = strState;
+	}
+
 	public int getAge() {
-		return Age;
+		return m_nAge;
 	}
 
-	/* the set/get method of the age */
-	public void setAge(int Age) {
-		this.Age = Age;
+	public String getName() {
+		return m_strName;
 	}
 
-	/* the set/get method of the status */
+	public String getImage() {
+		return m_strImage;
+	}
+
 	public String getStatus() {
-		return Status;
+		return m_strStatus;
 	}
 
-	/* the set/get method of the status */
-	public void setStatus(String Status) {
-		this.Status = Status;
+	public String getSex() {
+		return m_strSex;
 	}
 
-	/* the set/get method of the photo */
-	public String getPhoto() {
-		return photo;
+	public String getState() {
+		return m_strState;
 	}
 
-	/* the set/get method of the photo */
-	public void setPhoto(String photo) {
-		this.photo = photo;
+	public ArrayList<Person> getSiblings() {
+		return m_lstSibling;
 	}
 
-	/* the set/get method of the all information */
-	public void showProfile() {
-		this.getName();
-		this.getAge();
-		this.getStatus();
-		System.out.print("Name: " + Name + ", Age: " + Age + ", Status: " + Status + ", Photo: " + photo);
-
-	}
-	public String showProfile_string() {
-		this.getName();
-		this.getAge();
-		this.getStatus();
-		return " Age: " + Age + "\n Status: " + Status + "\n Photo: " + photo;
-
+	public ArrayList<Person> getParents() {
+		return m_lstParent;
 	}
 
-	/* the set/get method of the friend list */
-	public void showFriends() {
-		System.out.println("Friends List :");
-		for (int i = 0; i < Friends.size(); i++) {
-			System.out.println(i + 1 + ". " + Friends.get(i).Name);
+	public boolean addParent(Person person) {
+		if (null == person || 2 == m_lstParent.size())
+			return false;
+		// can't have two fathers or two mothers
+		for (int nIndex = 0; nIndex < m_lstParent.size(); nIndex++) {
+			if (m_lstParent.get(nIndex).getSex().equals(person.getSex()))
+				return false;
+		}
+		m_lstParent.add(person);
+		return true;
+	}
+
+	public void addSibling(Person person) {
+		if (null == person)
+			return;
+		m_lstSibling.add(person);
+	}
+
+	public void removeRelation(Person person) {
+		m_lstSibling.remove(person);
+		m_lstParent.remove(person);
+	}
+
+	public void removeRelation(String strName) {
+		Person person = getPerson(m_lstParent, strName);
+		if (null == person) {
+			person = getPerson(m_lstSibling, strName);
+			m_lstSibling.remove(person);
+		} else {
+			m_lstParent.remove(person);
 		}
 	}
-	
-	public String showFriends_string() {
-		String name="Friend List :"+"\n";
-		for (Person p: this.Friends){
-			
-		 name+= p.getName()+"\n";
+
+	public static Person getPerson(ArrayList<Person> lstPerson, String strName) {
+		if (null == lstPerson)
+			return null;
+		for (int nIndex = 0; nIndex < lstPerson.size(); nIndex++) {
+			if (lstPerson.get(nIndex).equals(strName))
+				return lstPerson.get(nIndex);
 		}
-		return name;
-	}
-	
-	/* the set/get method of the children */
-	public void showChildren() {
-
-	}
-	public String showChildren_string(){
-		return "";
-	}
-
-	/* the set/get method of the parents */
-	public void showParents() {
-
-	}
-	public String showParents_string(){
-		return "";
+		return null;
 	}
 }

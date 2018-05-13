@@ -1,38 +1,40 @@
-/*
- *  Author:Meng Gao	
- * Date: 22/3/2018
- * Introduction: Child define a class of all the Children in the Net,
- * inherit from Person.
- * for all Children. 
- */
-
 package Main;
-
 import java.util.ArrayList;
-import java.util.List;
 
-/* Inherit from Person,include Name and Age*/
 public class Child extends Person {
-	public Child(String Name, int Age) {
-		super(Name, Age);
+	private ArrayList<Person> m_lstFriends = null, m_lstClassmate = null;
+
+	public Child(String strName, int nAge, String strImage, String strStatus,
+			String strSex, String strState) {
+		super(strName, nAge, strImage, strStatus, strSex, strState);
+		// TODO Auto-generated constructor stub
+		m_lstFriends = new ArrayList<Person>();
+		m_lstClassmate = new ArrayList<Person>();
 	}
 
-	/* This is the list of every person has his/her friends. */
-	public List<Person> Parents = new ArrayList();
+	public boolean addFriend(Person person) {
+		if (person instanceof Child && 3 >= Math.abs(person.getAge() - m_nAge)) {
+			m_lstFriends.add(person);
+			Child child = (Child)person;
+			child.addFriend(this);
+			return true;
+		}
+		return false;
+	}
 
-	/* the set/get method of the Parents list */
-	public void showParents() {
-		System.out.println("Parents List :");
-		for (int i = 0; i < Parents.size(); i++) {
-			System.out.println(i + 1 + ". " + Parents.get(i).Name);
+	public void addClassmate(Person person) {
+		if (null != person) {
+			m_lstClassmate.add(person);
+			Child child = (Child)person;
+			child.addClassmate(this);
 		}
 	}
-	public String showParents_string() {
-		String name="Parent List :"+"\n";
-		for (Person p: this.Parents){
-			
-		 name+= p.getName()+"\n";
-		}
-		return name;
+
+	public ArrayList<Person> getFriends() {
+		return m_lstFriends;
+	}
+
+	public ArrayList<Person> getClassmates() {
+		return m_lstClassmate;
+	}
 }
-	}

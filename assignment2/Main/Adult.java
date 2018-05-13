@@ -1,37 +1,18 @@
-/*
- * Author:Meng Gao	
- * Date: 22/3/2018
- * Introduction: Adult define a class of all the Adult in the Net,
- * inherit from Person.d.
- * for all Person. 
- */
-
 package Main;
+import java.util.ArrayList;
 
-import java.util.*;
 
-/* Inherit from Person,include Name and Age*/
-public class Adult extends Person {
-	public Adult(String Name, int Age) {
-		super(Name, Age);
+public class Adult extends Person{
+	
+	public Adult(String strName, int nAge, String strImage, String strStatus, String strSex, String strState) {
+		super(strName, nAge, strImage, strStatus, strSex, strState);
+		// TODO Auto-generated constructor stub
 	}
-
-	/* This is the list of every person has his/her Children. */
-	public List<Person> Children = new ArrayList();
-
-	/* the set/get method of the Children list */
-	public void showChildren() {
-		System.out.println("Children List :");
-		for (int i = 0; i < Children.size(); i++) {
-			System.out.println(i + 1 + ". " + Children.get(i).Name);
-		}
-	}
-	public String showChildren_string() {
-		String name="Children List :"+"\n";
-		for (Person p: this.Children){
-			
-		 name+= p.getName()+"\n";
-		}
-		return name;
+	
+	public ArrayList<Person> getChildren()
+	{
+		RelationShipManager rManager = RelationShipManager.getInstance();
+		ArrayList<Person> lstChildren = rManager.getChildren(this);
+		return lstChildren;
 	}
 }
