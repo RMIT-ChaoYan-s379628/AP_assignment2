@@ -45,6 +45,7 @@ public class GUI extends Application {
 	}
 
 	private void setComboBox() {
+		comboBox.getItems().clear();
 		for (Person p : net) {
 			comboBox.getItems().addAll(p.getName());
 		}
