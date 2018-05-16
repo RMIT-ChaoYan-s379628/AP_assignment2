@@ -1,4 +1,10 @@
 
+/*
+* @Author:Meng Gao	
+* @Date: 17/5/2018
+* @Introduction: 
+*
+*/
 public class ParentShip extends RelationShip {
 	public ParentShip(Person parent, Person child) {
 		super(parent, child);
