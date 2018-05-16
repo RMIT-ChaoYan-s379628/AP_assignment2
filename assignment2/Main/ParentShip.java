@@ -7,7 +7,7 @@
 */
 public class ParentShip extends RelationShip {
 	
-	
+	/* Inherit from RelationShip*/
 	
 	public ParentShip(Person parent, Person child) {
 		super(parent, child);
