@@ -13,6 +13,8 @@ public abstract class RelationShip {
 	
 	protected Person m_person1 = null, m_person2 = null;
 
+	/* Construction method,including person1 and person2 */
+	
 	public RelationShip(Person person1, Person person2) {
 		m_person1 = person1;
 		m_person2 = person2;
