@@ -6,9 +6,11 @@
 *
 */
 public class FriendShip extends RelationShip {
+	
+	/* Inherit from RelationShip*/
+	
 	public FriendShip(Person person1, Person person2) {
 		super(person1, person2);
-		// TODO Auto-generated constructor stub
 	}
 
 	public Person getFirstPerson() {
