@@ -1,4 +1,3 @@
-package Main;
 public class FriendShip extends RelationShip {
 	public FriendShip(Person person1, Person person2) {
 		super(person1, person2);
