@@ -1,4 +1,3 @@
-package Main;
 
 public class ParentShip extends RelationShip {
 	public ParentShip(Person parent, Person child) {
