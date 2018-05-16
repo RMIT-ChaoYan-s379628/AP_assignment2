@@ -35,6 +35,7 @@ public abstract class RelationShip {
 		return m_person1 == person || m_person2 == person;
 	}
  
+	/* the set method of getAnotherPerson */
 	public Person getAnotherPerson(Person person) {
 		if (m_person1 == person) {
 			return m_person2;
