@@ -19,10 +19,12 @@ public abstract class RelationShip {
 		m_person1 = person1;
 		m_person2 = person2;
 	}
-
+	
+	/* the set method of getFirstPerson */
 	public Person getFirstPerson() {
 		return m_person1;
 	}
+
 
 	public Person getSecondPerson() {
 		return m_person2;
