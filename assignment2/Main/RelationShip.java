@@ -1,3 +1,10 @@
+
+/*
+* @Author:Meng Gao	
+* @Date: 17/5/2018
+* @Introduction: 
+*
+*/
 public abstract class RelationShip {
 	protected Person m_person1 = null, m_person2 = null;
 
