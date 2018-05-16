@@ -9,8 +9,8 @@ package Exception;
 
 public class NoSuchAgeException extends Exception {
 
-	/**
-	 * 
+	/*
+	 * The set of variable unchangeable
 	 */
 	private static final long serialVersionUID = 1L;
 
