@@ -6,9 +6,11 @@
 *
 */
 public class ParentShip extends RelationShip {
+	
+	
+	
 	public ParentShip(Person parent, Person child) {
 		super(parent, child);
-		// TODO Auto-generated constructor stub
 	}
 	
 	public Person getParent()
