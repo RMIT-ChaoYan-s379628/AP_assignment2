@@ -8,8 +8,8 @@ package Exception;
 */
 public class NotToBeFriendsException extends Exception {
 
-	/**
-	 * 
+	/*
+	 * The set of variable unchangeable
 	 */
 	private static final long serialVersionUID = 1L;
 
