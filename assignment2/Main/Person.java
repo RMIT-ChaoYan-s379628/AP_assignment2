@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Person {
 	protected int m_nAge;
 	protected String m_strName, m_strImage, m_strStatus, m_strSex, m_strState;
-	private ArrayList<Person> m_lstParent = null, m_lstSibling = null;
+	private ArrayList<Person> m_lstParent = null;
 
 	public Person(String strName, int nAge, String strImage, String strStatus,
 			String strSex, String strState) {
@@ -15,7 +15,6 @@ public class Person {
 		m_strSex = strSex;
 		m_strState = strState;
 		m_lstParent = new ArrayList<Person>();
-		m_lstSibling = new ArrayList<Person>();
 	}
 
 	public void setImage(String strImage) {
@@ -58,10 +57,6 @@ public class Person {
 		return m_strState;
 	}
 
-	public ArrayList<Person> getSiblings() {
-		return m_lstSibling;
-	}
-
 	public ArrayList<Person> getParents() {
 		return m_lstParent;
 	}
@@ -76,36 +71,5 @@ public class Person {
 		}
 		m_lstParent.add(person);
 		return true;
-	}
-
-	public void addSibling(Person person) {
-		if (null == person)
-			return;
-		m_lstSibling.add(person);
-	}
-
-	public void removeRelation(Person person) {
-		m_lstSibling.remove(person);
-		m_lstParent.remove(person);
-	}
-
-	public void removeRelation(String strName) {
-		Person person = getPerson(m_lstParent, strName);
-		if (null == person) {
-			person = getPerson(m_lstSibling, strName);
-			m_lstSibling.remove(person);
-		} else {
-			m_lstParent.remove(person);
-		}
-	}
-
-	public static Person getPerson(ArrayList<Person> lstPerson, String strName) {
-		if (null == lstPerson)
-			return null;
-		for (int nIndex = 0; nIndex < lstPerson.size(); nIndex++) {
-			if (lstPerson.get(nIndex).equals(strName))
-				return lstPerson.get(nIndex);
-		}
-		return null;
 	}
 }
