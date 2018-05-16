@@ -8,11 +8,12 @@ package Exception;
 */
 public class NotToBeParentException extends Exception {
 
-	/**
-	 * 
+	/*
+	 * The set of variable unchangeable
 	 */
 	private static final long serialVersionUID = 1L;
 
+	
 	public NotToBeParentException() {
 		super("Trying to make younger to be parent.");
 	}
