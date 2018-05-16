@@ -1,4 +1,3 @@
-package Main;
 
 public class SiblingShip extends RelationShip {
 	//notice that sibling ship is the persons who have same father or same mother
