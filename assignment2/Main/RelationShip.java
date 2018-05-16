@@ -24,8 +24,9 @@ public abstract class RelationShip {
 	public Person getFirstPerson() {
 		return m_person1;
 	}
-
-
+	
+	/* the set method of getSecondPerson */
+	
 	public Person getSecondPerson() {
 		return m_person2;
 	}
