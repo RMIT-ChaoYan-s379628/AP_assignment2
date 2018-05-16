@@ -1,4 +1,3 @@
-package Main;
 public abstract class RelationShip {
 	protected Person m_person1 = null, m_person2 = null;
 
