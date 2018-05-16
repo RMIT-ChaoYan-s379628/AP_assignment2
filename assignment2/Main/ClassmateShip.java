@@ -1,4 +1,3 @@
-package Main;
 
 public class ClassmateShip extends RelationShip {
 
