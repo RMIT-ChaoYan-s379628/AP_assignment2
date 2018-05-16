@@ -6,6 +6,11 @@
 *
 */
 public abstract class RelationShip {
+	
+	/*
+	*Construct two person methord only be used in this class and its subclasses.
+	*/
+	
 	protected Person m_person1 = null, m_person2 = null;
 
 	public RelationShip(Person person1, Person person2) {
