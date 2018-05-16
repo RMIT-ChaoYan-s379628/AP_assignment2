@@ -13,6 +13,9 @@ public class NotToBeCoupledException extends Exception {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	/*
+	 * Exceptions of one or both couple member is not an adult. 
+	 */
 	public NotToBeCoupledException() {
 		super("At least one of them is not an adult.");
 	}
