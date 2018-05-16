@@ -8,8 +8,8 @@ package Exception;
 */
 public class NoParentException extends Exception {
 
-	/**
-	 * 
+	/*
+	 * The set of variable unchangeable
 	 */
 	private static final long serialVersionUID = 1L;
 
