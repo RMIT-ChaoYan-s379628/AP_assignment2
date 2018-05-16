@@ -1,4 +1,5 @@
 package Main;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -17,23 +18,22 @@ import Exception.NotToBeFriendsException;
 import Exception.NotToBeParentException;
 import Exception.TooYoungException;
 
+/**
+ * @author Chao Yan
+ * @date 1/5/17 12:00
+ * @description
+ */
 public class Util {
 	private static final int ADULT_LIMIT = 16, CHILD_LIMIT = 3, LIMIT = 150;
-	
-	//create person according to the age, the age cannot be changed
-	public static Person createPerson(String strName, int nAge, String strImage, 
-			String strStatus, String strSex, String strState) throws NoSuchAgeException
-	{
-		if (LIMIT < nAge)
-		{
+
+	// create person according to the age, the age cannot be changed
+	public static Person createPerson(String strName, int nAge, String strImage, String strStatus, String strSex,
+			String strState) throws NoSuchAgeException {
+		if (LIMIT < nAge) {
 			throw new NoSuchAgeException();
-		}
-		else if (ADULT_LIMIT < nAge)
-		{
+		} else if (ADULT_LIMIT < nAge) {
 			return new Adult(strName, nAge, strImage, strStatus, strSex, strState);
-		}
-		else if (CHILD_LIMIT <= nAge)
-		{
+		} else if (CHILD_LIMIT <= nAge) {
 			return new Child(strName, nAge, strImage, strStatus, strSex, strState);
 		} else if (0 < nAge) {
 			return new YoungChild(strName, nAge, strImage, strStatus, strSex, strState);
@@ -48,7 +48,7 @@ public class Util {
 		return person.getName() + ", \"" + person.getImage() + "\"" + ", \"" + person.getStatus() + "\", "
 				+ person.getSex() + ", " + person.getAge() + ", " + person.getState();
 	}
-	
+
 	public static Person decodePerson(String strPerson) throws NumberFormatException, NoSuchAgeException {
 		if (null == strPerson)
 			return null;
@@ -67,10 +67,10 @@ public class Util {
 			}
 		}
 		lstInfo.add(strItem.trim());
-		return createPerson(lstInfo.get(0), Integer.parseInt(lstInfo.get(4)), lstInfo.get(1),
-				lstInfo.get(2), lstInfo.get(3), lstInfo.get(5));
+		return createPerson(lstInfo.get(0), Integer.parseInt(lstInfo.get(4)), lstInfo.get(1), lstInfo.get(2),
+				lstInfo.get(3), lstInfo.get(5));
 	}
-	
+
 	public static String[] decodeRelation(String strRelation) throws NumberFormatException, NoSuchAgeException {
 		if (null == strRelation)
 			return null;
@@ -82,7 +82,7 @@ public class Util {
 			cItem = strRelation.charAt(nIndex);
 			if (',' == cItem) {
 				lstInfo[index] = strItem.trim();
-				index ++;
+				index++;
 				strItem = "";
 			} else {
 				strItem += cItem;
@@ -91,21 +91,23 @@ public class Util {
 		lstInfo[index] = strItem.trim();
 		return lstInfo;
 	}
-	
-	public static ArrayList<Person> readPersonFromFile() throws FileNotFoundException, NumberFormatException, NoSuchAgeException {
+
+	public static ArrayList<Person> readPersonFromFile()
+			throws FileNotFoundException, NumberFormatException, NoSuchAgeException {
 		ArrayList<Person> person = new ArrayList<Person>();
 		Scanner input = new Scanner(new File("people.txt"));
-		while(input.hasNextLine()) {
+		while (input.hasNextLine()) {
 			Person temp = decodePerson(input.nextLine());
 			person.add(temp);
 		}
 		input.close();
 		return person;
 	}
-	
-	public static void readRelationFromFile(ArrayList<Person> people, RelationShipManager manager) throws FileNotFoundException, NumberFormatException, NoSuchAgeException {
+
+	public static void readRelationFromFile(ArrayList<Person> people, RelationShipManager manager)
+			throws FileNotFoundException, NumberFormatException, NoSuchAgeException {
 		Scanner input = new Scanner(new File("relations.txt"));
-		while(input.hasNextLine()) {
+		while (input.hasNextLine()) {
 			String[] lstInfo = decodeRelation(input.nextLine());
 			Person first = null;
 			Person second = null;
@@ -128,7 +130,7 @@ public class Util {
 		}
 		input.close();
 	}
-	
+
 	public static void writePersonToFile(ArrayList<Person> people) throws IOException {
 		File file = new File("people.txt");
 		if (!file.exists()) {
@@ -141,7 +143,7 @@ public class Util {
 		output.flush();
 		output.close();
 	}
-	
+
 	public static void writeRelationToFile(RelationShipManager manager) throws IOException {
 		File file = new File("relations.txt");
 		if (!file.exists()) {
@@ -152,7 +154,7 @@ public class Util {
 			Person first = manager.getRelations().get(i).getFirstPerson();
 			Person second = manager.getRelations().get(i).getSecondPerson();
 			String type = manager.checkRelationShip(first, second);
-			output.println(first.getName() + ", " +second.getName() + ", " + type);
+			output.println(first.getName() + ", " + second.getName() + ", " + type);
 		}
 		output.flush();
 		output.close();

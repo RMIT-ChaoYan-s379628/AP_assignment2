@@ -1,4 +1,5 @@
 package Main;
+
 import java.util.ArrayList;
 
 import Exception.NoAvailableException;
@@ -10,6 +11,11 @@ import Exception.NotToBeFriendsException;
 import Exception.NotToBeParentException;
 import Exception.TooYoungException;
 
+/**
+ * @author Chao Yan
+ * @date 1/5/17 12:00
+ * @description
+ */
 public class RelationShipManager {
 	private static RelationShipManager s_manager = null;
 	private ArrayList<RelationShip> m_lstRelations = null;
@@ -28,13 +34,16 @@ public class RelationShipManager {
 	public ArrayList<RelationShip> getRelations() {
 		return this.m_lstRelations;
 	}
-	
-	public void addRelationShip(Person first, Person second, String type) throws TooYoungException, NotToBeFriendsException, NotToBeCoupledException, NoAvailableException, NotToBeColleaguesException, NotToBeClassmatesException, NotToBeParentException, NoParentException {
+
+	public void addRelationShip(Person first, Person second, String type)
+			throws TooYoungException, NotToBeFriendsException, NotToBeCoupledException, NoAvailableException,
+			NotToBeColleaguesException, NotToBeClassmatesException, NotToBeParentException, NoParentException {
 		if (checkRelationShip(first, second).equals("null")) {
 			if (type.equals("friends")) {
 				if (first instanceof YoungChild || second instanceof YoungChild) {
 					throw new TooYoungException();
-				} else if ((first instanceof Adult && second instanceof Child) || (second instanceof Adult && first instanceof Child)) {
+				} else if ((first instanceof Adult && second instanceof Child)
+						|| (second instanceof Adult && first instanceof Child)) {
 					throw new NotToBeFriendsException();
 				} else if (second.getAge() - first.getAge() > 3 || first.getAge() - second.getAge() > 3) {
 					throw new NotToBeFriendsException();
@@ -160,7 +169,7 @@ public class RelationShipManager {
 		}
 		return lstSiblings;
 	}
-	
+
 	public boolean isMarried(Person person) {
 		for (int nIndex = 0; nIndex < m_lstRelations.size(); nIndex++) {
 			if (m_lstRelations.get(nIndex) instanceof CoupleShip && m_lstRelations.get(nIndex).hasPerson(person)) {

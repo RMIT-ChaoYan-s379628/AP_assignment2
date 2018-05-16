@@ -1,16 +1,16 @@
-/*
- * Author:Chao Yan	
- * Date: 22/3/2018
- * Introduction: The MiniNet class is the running class for this program.
- */
 package Main;
 
 import java.util.*;
 
+/**
+ * @author Chao Yan
+ * @date 1/5/17 12:00
+ * @description
+ */
 public class MiniNet {
 	public static void main(String[] args) {
 		Driver Game = new Driver();
 		Game.begin();
-		
+
 	}
 }

@@ -1,11 +1,16 @@
 package Main;
+
 import java.util.ArrayList;
 
+/**
+ * @author Chao Yan
+ * @date 1/5/17 12:00
+ * @description
+ */
 public class Child extends Person {
 	private ArrayList<Person> m_lstFriends = null, m_lstClassmate = null;
 
-	public Child(String strName, int nAge, String strImage, String strStatus,
-			String strSex, String strState) {
+	public Child(String strName, int nAge, String strImage, String strStatus, String strSex, String strState) {
 		super(strName, nAge, strImage, strStatus, strSex, strState);
 		// TODO Auto-generated constructor stub
 		m_lstFriends = new ArrayList<Person>();
@@ -15,7 +20,7 @@ public class Child extends Person {
 	public boolean addFriend(Person person) {
 		if (person instanceof Child && 3 >= Math.abs(person.getAge() - m_nAge)) {
 			m_lstFriends.add(person);
-			Child child = (Child)person;
+			Child child = (Child) person;
 			child.addFriend(this);
 			return true;
 		}
@@ -25,7 +30,7 @@ public class Child extends Person {
 	public void addClassmate(Person person) {
 		if (null != person) {
 			m_lstClassmate.add(person);
-			Child child = (Child)person;
+			Child child = (Child) person;
 			child.addClassmate(this);
 		}
 	}
