@@ -1,8 +1,8 @@
 
 /*
-* @Author:Meng Gao	
-* @Date: 17/5/2018
-* @Introduction: 
+* @author:Meng Gao	
+* @date: 17/5/2018
+* @introduction: 
 *
 */
 public class CoupleShip extends RelationShip {
