@@ -3,7 +3,7 @@ package Exception;
 /**
  * @Author:Meng Gao
  * @Date: 17/5/2018
- * @Introduction: Expections for parents age.
+ * @Introduction: Exception for parents age.
  *
  */
 public class NoSuchAgeException extends Exception {

@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 /**
  * @author Chao Yan
  * @date 1/5/17 12:00
- * @description
+ * @description The class is to design the GUI of alert box.
  */
 
 public class AlertBox {
