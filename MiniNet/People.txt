@@ -4,3 +4,4 @@ Fark Purner, "“”””", "“”””", F, 22, VIC
 Hannah White, "“Hannah.png”", "“student at PLC”", F, 14, VIC
 Zoe Foster, "“”", "“Founder of ZFX”", F, 28, VIC
 Mark Turner, "“Mark.jpeg”", "“”", M, 2, VIC
+Olly Bank, "", "", F, 15, ACT

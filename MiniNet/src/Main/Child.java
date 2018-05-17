@@ -5,7 +5,9 @@ import java.util.ArrayList;
 /**
  * @author Chao Yan
  * @date 1/5/17 12:00
- * @description
+ * @description Child define a class of all the children in the Net,
+ * inherit from Person.
+ * for all children.
  */
 
 public class Child extends Person {
