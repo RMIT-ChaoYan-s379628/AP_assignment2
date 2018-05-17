@@ -11,7 +11,8 @@ public class ParentShip extends RelationShip {
     /* Inherit from RelationShip*/
     public ParentShip(Person parent, Person child) {
         super(parent, child);
-        // TODO Auto-generated constructor stub
+        /*TODO Auto-generated constructor stub*/
+        
     }
 
     /* The get method of parent name*/
