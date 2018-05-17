@@ -32,6 +32,7 @@ public class Person {
 		m_strImage = strImage;
 	}
 
+	/* the set/get method of the Status */
 	public void setStatus(String strStatus) {
 		m_strStatus = strStatus;
 	}
