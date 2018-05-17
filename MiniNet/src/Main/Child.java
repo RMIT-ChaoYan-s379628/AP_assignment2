@@ -32,6 +32,7 @@ public class Child extends Person {
 		return false;
 	}
 
+	/* the set/get method of the Parents list */
 	public void addClassmate(Person person) {
 		if (null != person) {
 			m_lstClassmate.add(person);
