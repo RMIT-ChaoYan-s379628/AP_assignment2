@@ -22,7 +22,7 @@ import javafx.stage.Stage;
 public class AlertBox {
 
     /*
-     *Concstruct a display method，including title and message.
+     *Create a new window to notice the message of feedback from the system.
      */
     public void display(String title, String message) {
         Stage window = new Stage();
