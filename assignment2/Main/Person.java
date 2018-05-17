@@ -72,10 +72,12 @@ public class Person {
 		return m_strSex;
 	}
 
+	/* the set/get method of the State */
 	public String getState() {
 		return m_strState;
 	}
 
+	/* the set/get method of the Parents */
 	public ArrayList<Person> getParents() {
 		return m_lstParent;
 	}
