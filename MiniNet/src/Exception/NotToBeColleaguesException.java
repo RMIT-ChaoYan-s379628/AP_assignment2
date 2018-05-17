@@ -17,6 +17,6 @@ public class NotToBeColleaguesException extends Exception {
 	 * Exceptions of child's connection in a colleague relation.
 	 */
 	public NotToBeColleaguesException() {
-		super("Trying to connect a child in a colleague relation.");
+		super("You cannot connect a child in a colleague relation.");
 	}
 }
