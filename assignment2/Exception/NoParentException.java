@@ -3,7 +3,7 @@ package Exception;
 /**
  * @Author:Meng Gao	
 * @Date: 17/5/2018
-* @Introduction: 
+* @Introduction: Expections for a child with one or no parent.
 *
 */
 public class NoParentException extends Exception {
