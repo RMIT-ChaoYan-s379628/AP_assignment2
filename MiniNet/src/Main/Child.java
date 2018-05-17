@@ -24,6 +24,7 @@ public class Child extends Person {
         m_lstClassmate = new ArrayList<Person>();
     }
 
+    /* Determine a Person's age is negative. */
     public boolean addFriend(Person person) {
         if (person instanceof Child && 3 >= Math.abs(person.getAge() - m_nAge)) {
             m_lstFriends.add(person);
