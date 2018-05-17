@@ -3,7 +3,8 @@ package Main;
 /**
 * @Author:Meng Gao	
 * @Date: 17/5/2018
-* @Introduction: 
+* @Introduction: ParentShip define a class of all the parentship in the Net,
+ * inherit from Relationship.
 *
 */
 public class ParentShip extends RelationShip {

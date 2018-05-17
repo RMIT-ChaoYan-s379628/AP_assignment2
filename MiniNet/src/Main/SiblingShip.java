@@ -3,7 +3,8 @@ package Main;
 /**
 * @Author:Meng Gao	
 * @Date: 17/5/2018
-* @Introduction: 
+* @Introduction: SiblingShip define a class of all the siblingship in the Net,
+ * inherit from Relationship.
 *
 */
 public class SiblingShip extends RelationShip {

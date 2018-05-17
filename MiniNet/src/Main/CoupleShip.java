@@ -3,7 +3,8 @@ package Main;
 /**
 * @author:Meng Gao	
 * @date: 17/5/2018
-* @introduction: 
+* @introduction: CoupleShip define a class of all the coupleship in the Net,
+ * inherit from Relationship.
 *
 */
 public class CoupleShip extends RelationShip {

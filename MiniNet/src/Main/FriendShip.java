@@ -3,7 +3,8 @@ package Main;
 /**
 * @Author:Meng Gao	
 * @Date: 17/5/2018
-* @Introduction: 
+* @Introduction: FriendShip define a class of all the friendship in the Net,
+ * inherit from Relationship.
 *
 */
 public class FriendShip extends RelationShip {
