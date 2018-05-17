@@ -27,6 +27,7 @@ public class Person {
 		m_lstParent = new ArrayList<Person>();
 	}
 
+	/* the set/get method of the Image */
 	public void setImage(String strImage) {
 		m_strImage = strImage;
 	}
