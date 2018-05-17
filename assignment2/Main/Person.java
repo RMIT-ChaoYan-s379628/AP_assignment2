@@ -37,6 +37,7 @@ public class Person {
 		m_strStatus = strStatus;
 	}
 
+	/* the set/get method of the Sex */
 	public void setSex(String strSex) {
 		m_strSex = strSex;
 	}
