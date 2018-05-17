@@ -18,7 +18,14 @@ import Exception.TooYoungException;
 
 public class RelationShipManager {
 
+	/*
+	*Construct Manager relation methord only be used in this class.
+	*/
 	private static RelationShipManager s_manager = null;
+	
+	/*
+	*Construct Linkedlist of RelationShip used in this class.
+	*/
 	private LinkedList<RelationShip> m_lstRelations = null;
 
 	private RelationShipManager() {
