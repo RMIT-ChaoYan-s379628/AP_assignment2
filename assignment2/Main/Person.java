@@ -12,6 +12,8 @@ import java.util.ArrayList;
 public class Person {
 	protected int m_nAge;
 	protected String m_strName, m_strImage, m_strStatus, m_strSex, m_strState;
+	
+	/* This is the list of every person has his/her friends. */
 	private ArrayList<Person> m_lstParent = null;
 
 	public Person(String strName, int nAge, String strImage, String strStatus, String strSex, String strState) {
