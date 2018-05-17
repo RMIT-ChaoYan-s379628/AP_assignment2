@@ -152,6 +152,9 @@ public class RelationShipManager {
 		return "null";
 	}
 
+	/*
+	*Input and get Method of a person's Children list.
+	*/
 	public LinkedList<Person> getChildren(Person person) {
 		LinkedList<Person> lstChildren = new LinkedList<Person>();
 		if (null != person) {
@@ -202,6 +205,9 @@ public class RelationShipManager {
 		return lstSiblings;
 	}
 
+	/*
+	*determine the marriage between the two
+	*/
 	public boolean isMarried(Person person) {
 		for (int nIndex = 0; nIndex < m_lstRelations.size(); nIndex++) {
 			if (m_lstRelations.get(nIndex) instanceof CoupleShip && m_lstRelations.get(nIndex).hasPerson(person)) {
@@ -211,6 +217,9 @@ public class RelationShipManager {
 		return false;
 	}
 
+	/*
+	*Determine the child's condition of this person.
+	*/
 	public boolean deletePerson(Person person) {
 		if (getChildren(person).size() > 0) {
 			return false;
