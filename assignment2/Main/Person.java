@@ -16,6 +16,7 @@ public class Person {
 	/* This is the list of every person has his/her friends. */
 	private ArrayList<Person> m_lstParent = null;
 
+	/* Construction method,including name and age to construct a person */
 	public Person(String strName, int nAge, String strImage, String strStatus, String strSex, String strState) {
 		m_strName = strName;
 		m_nAge = nAge;
