@@ -13,6 +13,10 @@ public class NoAvailableException extends Exception {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	/*
+	 * Exceptions of two adults have least one connection with another adult as
+	 * a couple.
+	 */
 	public NoAvailableException() {
 		super("At least one of them is already married with another adult.");
 	}
