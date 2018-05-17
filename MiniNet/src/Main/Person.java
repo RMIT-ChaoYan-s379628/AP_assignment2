@@ -7,13 +7,13 @@ import java.util.LinkedList;
  * @date 1/5/17 12:00
  * @description Person define a class of all the person in the Net,
  * including Adult and Child.
- * for all Person. 
+ * for all Person.
  */
 
 public class Person {
     protected int m_nAge;
     protected String m_strName, m_strImage, m_strStatus, m_strSex, m_strState;
-   
+
     /* This is the list of every person has his/her friends. */
     private LinkedList<Person> m_lstParent = null;
 
@@ -86,7 +86,7 @@ public class Person {
     public boolean addParent(Person person) {
         if (null == person || 2 == m_lstParent.size())
             return false;
-        
+
         /* can't have two fathers or two mothers*/
         for (int nIndex = 0; nIndex < m_lstParent.size(); nIndex++) {
             if (m_lstParent.get(nIndex).getSex().equals(person.getSex()))

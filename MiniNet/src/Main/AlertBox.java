@@ -20,28 +20,28 @@ import javafx.stage.Stage;
  */
 
 public class AlertBox {
-	
-	/*
-	*Concstruct a display method，including title and message.
-	*/
-	public void display(String title, String message) {
-		Stage window = new Stage();
-		window.setTitle(title);
-		window.initModality(Modality.APPLICATION_MODAL);
-		window.setMinWidth(300);
-		window.setMinHeight(150);
 
-		Button button = new Button("confirm");
-		button.setOnAction(e -> window.close());
+    /*
+     *Concstruct a display method，including title and message.
+     */
+    public void display(String title, String message) {
+        Stage window = new Stage();
+        window.setTitle(title);
+        window.initModality(Modality.APPLICATION_MODAL);
+        window.setMinWidth(300);
+        window.setMinHeight(150);
 
-		Label label = new Label(message);
+        Button button = new Button("confirm");
+        button.setOnAction(e -> window.close());
 
-		VBox layout = new VBox(10);
-		layout.getChildren().addAll(label, button);
-		layout.setAlignment(Pos.CENTER);
+        Label label = new Label(message);
 
-		Scene scene = new Scene(layout);
-		window.setScene(scene);
-		window.showAndWait();
-	}
+        VBox layout = new VBox(10);
+        layout.getChildren().addAll(label, button);
+        layout.setAlignment(Pos.CENTER);
+
+        Scene scene = new Scene(layout);
+        window.setScene(scene);
+        window.showAndWait();
+    }
 }
