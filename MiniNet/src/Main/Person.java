@@ -5,7 +5,9 @@ import java.util.LinkedList;
 /**
  * @author Chao Yan
  * @date 1/5/17 12:00
- * @description
+ * @description Person define a class of all the person in the Net,
+ * including Adult and Child.
+ * for all Person. 
  */
 
 public class Person {
