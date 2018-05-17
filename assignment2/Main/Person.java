@@ -42,14 +42,17 @@ public class Person {
 		m_strSex = strSex;
 	}
 
+	/* the set/get method of the State */
 	public void setState(String strState) {
 		m_strState = strState;
 	}
 
+	/* the set/get method of the Age */
 	public int getAge() {
 		return m_nAge;
 	}
 
+	/* the set/get method of the Name */
 	public String getName() {
 		return m_strName;
 	}
