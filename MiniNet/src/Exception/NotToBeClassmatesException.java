@@ -16,6 +16,6 @@ public class NotToBeClassmatesException extends Exception {
 	 * Exceptions of set classmate relation 
 	 */
 	public NotToBeClassmatesException() {
-		super("Trying to make a young child in a classmate relation.");
+		super("You cannot make a young child in a classmate relation.");
 	}
 }
