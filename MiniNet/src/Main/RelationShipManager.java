@@ -13,7 +13,7 @@ import Exception.TooYoungException;
 /**
  * @author Chao Yan
  * @date 1/5/17 12:00
- * @description
+ * @description This class plays as a controller role in the programming.
  */
 
 public class RelationShipManager {
