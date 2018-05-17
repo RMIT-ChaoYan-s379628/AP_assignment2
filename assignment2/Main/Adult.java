@@ -9,6 +9,7 @@ import java.util.ArrayList;
  */
 public class Adult extends Person {
 
+	/* Inherit from Person,include Name and Age*/
 	public Adult(String strName, int nAge, String strImage, String strStatus, String strSex, String strState) {
 		super(strName, nAge, strImage, strStatus, strSex, strState);
 		// TODO Auto-generated constructor stub
