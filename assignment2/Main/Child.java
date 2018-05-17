@@ -7,6 +7,8 @@ import java.util.ArrayList;
  * @date 1/5/17 12:00
  * @description
  */
+
+/* Inherit from Person,include Name and Age*/
 public class Child extends Person {
 	private ArrayList<Person> m_lstFriends = null, m_lstClassmate = null;
 
