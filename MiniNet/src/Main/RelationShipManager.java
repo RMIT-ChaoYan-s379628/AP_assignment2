@@ -31,7 +31,9 @@ public class RelationShipManager {
 	private RelationShipManager() {
 		m_lstRelations = new LinkedList<>();
 	}
-
+/*
+	*Construct Linkedlist of RelationShip used in this class.
+	*/
 	public static RelationShipManager getInstance() {
 		if (null == s_manager) {
 			s_manager = new RelationShipManager();
