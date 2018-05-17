@@ -20,6 +20,10 @@ import javafx.stage.Stage;
  */
 
 public class AlertBox {
+	
+	/*
+	*Concstruct a display method，including title and message.
+	*/
 	public void display(String title, String message) {
 		Stage window = new Stage();
 		window.setTitle(title);
