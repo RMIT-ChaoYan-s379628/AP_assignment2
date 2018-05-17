@@ -57,10 +57,12 @@ public class Person {
 		return m_strName;
 	}
 
+	/* the set/get method of the Image*/
 	public String getImage() {
 		return m_strImage;
 	}
 
+	/* the set/get method of the Status */
 	public String getStatus() {
 		return m_strStatus;
 	}
