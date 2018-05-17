@@ -1,7 +1,8 @@
-Alex Smith, "“”", "“student at RMIT”", M, 21, WA
+Alex Smith, "“/src/Avengers_Infinity_War_SDCC_poster.jpg”", "“student at RMIT”", M, 21, WA
 Ben Turner, "“BenPhoto.jpg”", "“manager at Coles”", M, 35, VIC
 Fark Purner, "“”””", "“”””", F, 22, VIC
 Hannah White, "“Hannah.png”", "“student at PLC”", F, 14, VIC
 Zoe Foster, "“”", "“Founder of ZFX”", F, 28, VIC
 Mark Turner, "“Mark.jpeg”", "“”", M, 2, VIC
 Olly Bank, "", "", F, 15, ACT
+Robert King, "/Users/mr.chao/Documents/GitHub/assignment2/MiniNet/src/Avengers_Infinity_War_SDCC_poster.jpg", "", M, 25, ACT
