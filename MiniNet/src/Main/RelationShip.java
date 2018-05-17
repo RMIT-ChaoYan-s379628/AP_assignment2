@@ -7,17 +7,25 @@ package Main;
 *
 */
 public abstract class RelationShip {
+	
+	/*
+	*Construct two person methord only be used in this class and its subclasses.
+	*/
 	protected Person m_person1 = null, m_person2 = null;
 
+	/* Construction method,including person1 and person2 */
+	
 	public RelationShip(Person person1, Person person2) {
 		m_person1 = person1;
 		m_person2 = person2;
 	}
 
+	/* the set method of getFirstPerson */
 	public Person getFirstPerson() {
 		return m_person1;
 	}
 
+	/* the set method of getSecondPerson */
 	public Person getSecondPerson() {
 		return m_person2;
 	}
@@ -26,6 +34,7 @@ public abstract class RelationShip {
 		return m_person1 == person || m_person2 == person;
 	}
 
+	/* the set method of getAnotherPerson */
 	public Person getAnotherPerson(Person person) {
 		if (m_person1 == person) {
 			return m_person2;
