@@ -3,7 +3,7 @@ package Exception;
 /**
 * @Author:Meng Gao	
 * @Date: 17/5/2018
-* @Introduction: 
+* @Introduction: Exception for a couple who is not an adult.
 *
 */
 public class NotToBeCoupledException extends Exception {
