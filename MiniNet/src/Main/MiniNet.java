@@ -1,11 +1,5 @@
 package Main;
 
-/**
- * @author Chao Yan
- * @date 1/5/17 12:00
- * @description
- */ 
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -54,7 +48,8 @@ import javafx.stage.WindowEvent;
 /**
  * @author Chao Yan
  * @date 1/5/17 12:00
- * @description
+ * @description This class is to design the GUI which interact with users
+ * and it is also the main driver for the whole programming.
  */
 
 public class MiniNet extends Application implements EventHandler<ActionEvent> {
