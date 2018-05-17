@@ -41,10 +41,12 @@ public class Child extends Person {
 		}
 	}
 
+	/* the set/get method of the Friends list */
 	public ArrayList<Person> getFriends() {
 		return m_lstFriends;
 	}
 
+	/* the set/get method of the Classmates list */
 	public ArrayList<Person> getClassmates() {
 		return m_lstClassmate;
 	}
