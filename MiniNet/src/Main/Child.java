@@ -9,6 +9,9 @@ import java.util.ArrayList;
  */
 
 public class Child extends Person {
+	
+	/* Inherit from Person,include Name and Age*/
+	
 	private ArrayList<Person> m_lstFriends = null, m_lstClassmate = null;
 
 	public Child(String strName, int nAge, String strImage, String strStatus, String strSex, String strState) {
