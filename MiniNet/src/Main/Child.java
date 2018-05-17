@@ -14,6 +14,7 @@ public class Child extends Person {
 	
 	private ArrayList<Person> m_lstFriends = null, m_lstClassmate = null;
 
+	/* This is the list of every person has his/her friends. */
 	public Child(String strName, int nAge, String strImage, String strStatus, String strSex, String strState) {
 		super(strName, nAge, strImage, strStatus, strSex, strState);
 		// TODO Auto-generated constructor stub
