@@ -16,6 +16,7 @@ public class Adult extends Person {
 		// TODO Auto-generated constructor stub
 	}
 
+	/* the set/get method of the Children list */
 	public LinkedList<Person> getChildren() {
 		RelationShipManager rManager = RelationShipManager.getInstance();
 		LinkedList<Person> lstChildren = rManager.getChildren(this);
