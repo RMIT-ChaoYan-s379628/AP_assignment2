@@ -13,6 +13,9 @@ public class TooYoungException extends Exception {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	/*
+	 * Exceptions of making friends with young child.
+	 */
 	public TooYoungException() {
 		super("Trying to make friend with a young child");
 	}
