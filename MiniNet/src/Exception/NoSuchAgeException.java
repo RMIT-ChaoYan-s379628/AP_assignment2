@@ -14,7 +14,7 @@ public class NoSuchAgeException extends Exception {
 	private static final long serialVersionUID = 1L;
 
 	/*
-	 * Exceptions of  input parent's age is negative or over 150
+	 * Exceptions of input parent's age is negative or over 150
 	 */
 	public NoSuchAgeException() {
 		super("No such age.");

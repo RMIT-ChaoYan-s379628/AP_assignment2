@@ -14,7 +14,7 @@ public class NotToBeClassmatesException extends Exception {
 	private static final long serialVersionUID = 1L;
 
 	/*
-	 * Exceptions of set classmate relation 
+	 * Exceptions of set classmate relation
 	 */
 	public NotToBeClassmatesException() {
 		super("You cannot make a young child in a classmate relation.");

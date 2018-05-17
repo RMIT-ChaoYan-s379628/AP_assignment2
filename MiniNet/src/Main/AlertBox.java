@@ -21,27 +21,32 @@ import javafx.stage.Stage;
 
 public class AlertBox {
 
-    /*
-     *Create a new window to notice the message of feedback from the system.
-     */
-    public void display(String title, String message) {
-        Stage window = new Stage();
-        window.setTitle(title);
-        window.initModality(Modality.APPLICATION_MODAL);
-        window.setMinWidth(300);
-        window.setMinHeight(150);
+	/**
+	 * Show an alert dialog with specified title and message
+	 * 
+	 * @param title
+	 *            title of the alert dialog
+	 * @param message
+	 *            message of the alert dialog
+	 */
+	public void display(String title, String message) {
+		Stage window = new Stage();
+		window.setTitle(title);
+		window.initModality(Modality.APPLICATION_MODAL);
+		window.setMinWidth(300);
+		window.setMinHeight(150);
 
-        Button button = new Button("confirm");
-        button.setOnAction(e -> window.close());
+		Button button = new Button("confirm");
+		button.setOnAction(e -> window.close());
 
-        Label label = new Label(message);
+		Label label = new Label(message);
 
-        VBox layout = new VBox(10);
-        layout.getChildren().addAll(label, button);
-        layout.setAlignment(Pos.CENTER);
+		VBox layout = new VBox(10);
+		layout.getChildren().addAll(label, button);
+		layout.setAlignment(Pos.CENTER);
 
-        Scene scene = new Scene(layout);
-        window.setScene(scene);
-        window.showAndWait();
-    }
+		Scene scene = new Scene(layout);
+		window.setScene(scene);
+		window.showAndWait();
+	}
 }
