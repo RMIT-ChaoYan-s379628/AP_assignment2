@@ -45,6 +45,9 @@ public class RelationShipManager {
 		return this.m_lstRelations;
 	}
 
+	/*
+	*Construct Method of removing exceptions while adding relationships.
+	*/
 	public void addRelationShip(Person first, Person second, String type)
 			throws TooYoungException, NotToBeFriendsException, NotToBeCoupledException, NoAvailableException,
 			NotToBeColleaguesException, NotToBeClassmatesException, NoParentException {
@@ -119,6 +122,9 @@ public class RelationShipManager {
 		}
 	}
 
+	/*
+	*Determine a relationship existence and create a relationship.
+	*/
 	public String checkRelationShip(Person person1, Person person2) {
 		if (null != person1 && null != person2 && person1 != person2) {
 			Person firstPerson = null, secondPerson = null;
@@ -160,6 +166,9 @@ public class RelationShipManager {
 		return lstChildren;
 	}
 
+	/*
+	*Input and get Method of a person's parent list.
+	*/
 	public LinkedList<Person> getParents(Person person) {
 		LinkedList<Person> lstParents = new LinkedList<>();
 		if (null != person) {
@@ -174,6 +183,9 @@ public class RelationShipManager {
 		return lstParents;
 	}
 
+	/*
+	*Input and get Method of a person's parent list.
+	*/
 	public LinkedList<Person> getSiblings(Person person) {
 		LinkedList<Person> lstSiblings = new LinkedList<Person>();
 		if (null != person) {
@@ -214,6 +226,9 @@ public class RelationShipManager {
 		}
 	}
 
+	/*
+	*Input and get Method of a person's RelationShip list.
+	*/
 	public LinkedList<RelationShip> getAllRelatedRelation(Person person) {
 		LinkedList<RelationShip> relationships = new LinkedList<>();
 		for (int nIndex = 0; nIndex < m_lstRelations.size(); nIndex++) {
