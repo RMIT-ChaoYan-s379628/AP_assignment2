@@ -17,6 +17,6 @@ public class TooYoungException extends Exception {
 	 * Exceptions of making friends with young child.
 	 */
 	public TooYoungException() {
-		super("Trying to make friend with a young child");
+		super("You cannot make friend with a young child");
 	}
 }
