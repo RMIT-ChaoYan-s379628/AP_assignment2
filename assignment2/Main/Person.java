@@ -67,6 +67,7 @@ public class Person {
 		return m_strStatus;
 	}
 
+	/* the set/get method of the Sex */
 	public String getSex() {
 		return m_strSex;
 	}
